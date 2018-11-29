@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,6 +27,7 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { TooltipsComponent } from './tooltips/tooltips.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { TabsComponent } from './tabs/tabs.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
 
 @NgModule({
   declarations: [
@@ -48,13 +50,15 @@ import { TabsComponent } from './tabs/tabs.component';
     DropdownComponent,
     TooltipsComponent,
     CarouselComponent,
-    TabsComponent
+    TabsComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
     RouterModule,
     AppRoutingModule,
     FormsModule,
+    MaterialModule,
     NgbModule.forRoot()
   ],
   providers: [],
