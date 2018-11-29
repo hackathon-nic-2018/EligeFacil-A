@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { MaterialModule } from './material.module';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -55,6 +56,7 @@ import { TabsComponent } from './tabs/tabs.component';
     RouterModule,
     AppRoutingModule,
     FormsModule,
+    MaterialModule,
     NgbModule.forRoot()
   ],
   providers: [],
