@@ -23,3 +23,9 @@ Route::group(['middleware' => 'cors'], function() {
    Route::get('search/{busqueda}',function($busqueda){
      $products = App\Product::all();
 
+    $filtered = $products->filter(function($value, $key) use($busqueda) {
+        return stristr($value->nombre,$busqueda);
+    });
+    return $filtered->all();
+   });
+});
