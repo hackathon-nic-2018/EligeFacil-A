@@ -10,16 +10,16 @@ class Image extends Model
 
     public function users()
     {
-        return $this->hasMany('App\User');
+        return $this->belongsToMany('App\User');
     }
 
     public function products()
     {
-        return $this->hasMany('App\Product');
+        return $this->belongsToMany('App\Product');
     }
 
     public function stores()
     {
-        return $this->hasMany('App\Store');
+        return $this->belongsToMany('App\Store');
     }
 }
