@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('product/{product}/image', function(App\Product $product){
+  if($product->imagen) return Storage::response(str_replace('storage/','public/',$product->imagen));
+})->name('product.image');
